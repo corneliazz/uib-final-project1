@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Open Sans;
+    background-image: url(images/city-wien1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;    
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: Open Sans;
+    /* background-color: black; */
+    background-image: url(images/head3.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    border: 1px solid gray;
+    color: white;  
+    padding: 20px;
+    position: sticky;
+    top: 0;    
+}
+
+/* Navigation */
+.nav {    
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    width: 140px;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 1.5em;
+      
+  }
+  
+  li a:hover {
+    border-radius: 10%;
+    border: 2px solid antiquewhite;
+  }
+}
+  
+/* Schriftgrössen etc. */
+h1 {
+  font-size: 4em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+p {
+    color: antiquewhite;
+    border: 1px solid antiquewhite;
+    border-radius: 10%;
+    max-width: 300px;
+    margin: 20px;
+    padding: 20px;
+}  
+
+
+
+
+
+
+
+
+
+
