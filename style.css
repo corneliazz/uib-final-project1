@@ -20,13 +20,14 @@ header {
     align-items: center;
     flex-wrap: wrap;
     font-family: Open Sans;
-    /* background-color: black; */
     background-image: url(images/head3.jpg);
     background-size: cover;
     background-attachment: fixed;
-    border: 1px solid gray;
+    /* border: 1px solid gray; */
     color: white;  
     padding: 20px;
+    max-width: 1440px;
+    margin: 0 auto;
     position: sticky;
     top: 0;    
 }
@@ -66,26 +67,68 @@ header {
 h1 {
   font-size: 4em;
 }
-
 h2 {
   font-size: 1.5em;
 }
 
-p {
-    color: antiquewhite;
-    border: 1px solid antiquewhite;
-    border-radius: 10%;
-    max-width: 300px;
-    margin: 20px;
-    padding: 20px;
-}  
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+/* Start-Container */
+.start-container {
+  display:block;
+  justify-content: center;
+  color: antiquewhite;
+}
+
+.box1 {
+  padding: 50px;
+  /* border: 1px solid #ccc; */
+  color: antiquewhite;
+}
 
 
+/* Grid 3x3 Boxen */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 1fr)); /* Flexible Spalten */
+  gap: 20px; /* Abstand zwischen den Boxen */
+}
 
 
+/* Boxen */
+.box {
+  /* background-color: lightgray; */
+  padding: 50px;
+  border: 1px solid #ccc;
+  border-radius: 5%;
+  color: antiquewhite;
+  text-align: center;
+}
 
+.box img {
+  width: 100%;         /* Bild nimmt die gesamte Breite der Box ein */
+  height: auto;        /* Höhe wird automatisch angepasst, um die Proportionen zu bewahren */
+  object-fit: cover;   /* Bild wird passend zugeschnitten, um die gesamte Fläche auszufüllen */
+  display: block;      /* Verhindert Leerraum unter dem Bild */
+}
 
+/* Für kleinere Bildschirme (ab 600px) */
+@media (max-width: 768px) {
+  .grid-container {
+      grid-template-columns: repeat(2, 1fr); /* 2 Spalten */
+      grid-template-rows: repeat(4, 1fr);    /* 4 Reihen, um alles unterzubringen */
+  }
+}
 
+/* Für noch kleinere Bildschirme (ab 480px) */
+@media (max-width: 480px) {
+  .grid-container {
+      grid-template-columns: 1fr; /* 1 Spalte */
+      grid-template-rows: repeat(9, 1fr); /* 9 Reihen */
+  }
+}
 
 
 
