@@ -21,11 +21,33 @@
 <ul>
     <li><a class="active" href="index.html">Welcome</a></li>
     <li><a href="about.html">About</a></li>
-    <li><a href="style.css">Contact</a></li>
+    <li><a href="contact.html">Contact</a></li>
     </ul>
 </div>
 </Header>
 
+<main>
+<div class="text2">
+    <p>Ihr könnt mir gern eine Nachricht hinterlassen. Ich freue mich auf eure Anregungen und Feedback.</p>
+
+</div>
+
+<div class="contact-form">
+    <form action="submit_form.php" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Nachricht:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <button type="submit">Absenden</button>
+    </form>
+  </div>
+
+</main>
 
 <footer>
     <p>&copy; 2025</p>
