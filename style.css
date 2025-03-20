@@ -36,8 +36,8 @@ header {
 .nav {    
   ul {
     list-style-type: none;
-    margin: 10;
-    padding: 10;
+    margin: 10px;
+    padding: 10px;
     overflow: hidden;
   }
   
@@ -86,10 +86,15 @@ main {
 .container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center; 
-  margin: 0 auto;
-  gap: 10px; 
+  flex-wrap: wrap; .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; 
+    flex-wrap: wrap; 
+  }
 }
 
 /* Slideshow */
@@ -158,8 +163,8 @@ main {
 /* Grid 2x3 Boxen */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(3, minmax(250px, 1fr)); /* Flexible Spalten */
-  gap: 30px; /* Abstand zwischen den Boxen */
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  gap: 30px;
 }
 
 
@@ -172,6 +177,10 @@ main {
   color: antiquewhite;
 }
 
+h1 {
+  text-align: center;
+  color: antiquewhite;
+}
 .title1 {
   text-align: center;
   font-size: 1.5em;
@@ -211,34 +220,19 @@ button a {
   border-radius: 1%;
 }
 
-/* Responsive Design */
-/* Für Bildschirme max 768px) */
-@media (max-width: 768px) {
-  .grid-container {
-      grid-template-columns: repeat(2, 1fr); /* 2 Spalten */
-      grid-template-rows: repeat(4, 1fr);    /* 4 Reihen, um alles unterzubringen */
-  }
-}
-
-/* Für Bildschirme max 480px */
-@media (max-width: 480px) {
-  .grid-container {
-      grid-template-columns: 1fr; /* 1 Spalte */
-      grid-template-rows: repeat(9, 1fr); /* 9 Reihen */
-  }
-}
-
 /* Kontaktformular */
-
 .text2 {
+  max-width: 800px;
+  margin: 10px auto;
+  padding: 10px;
   color: antiquewhite;
   text-align: center;
   font-size: 1.5em;
 }
 .contact-form {
   max-width: 600px;
-  margin: 20px auto;
-  padding: 20px;
+  margin: 10px auto;
+  padding: 10px;
   background-color: rgba(0, 0, 0, 0.8);
   border: 2px solid antiquewhite;
   border-radius: 5px;
@@ -270,6 +264,21 @@ button a {
   background-color: rgb(255, 140, 0);
 }
 
+/* About */
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 30px;
+  color: antiquewhite;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 2px solid antiquewhite;
+  border-radius: 5px;
+}
+
+/* Footer */
 footer {
   display: block;
   text-align: center;
@@ -278,4 +287,45 @@ footer {
   margin: auto;
   padding: 50px;
 
+}
+
+/* Stadtseiten mit 2x3 Boxen */
+/* Grid 2x3 Boxen */
+.grid-container2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(250px, 1fr)); /* flexible Spalten */
+  gap: 30px;
+}
+
+
+/* Stadtseiten einzelne Boxen, Schrift etc. */
+.box4 {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px 30px;
+  border: 2px solid antiquewhite;
+  border-radius: 2%;
+  color: antiquewhite;
+}
+
+/* Responsive Design */
+/* Für Bildschirme max 768px) */
+@media screen and (max-width: 768px) {
+  .grid-container {
+      grid-template-columns: repeat(2, 1fr); /* 2 Spalten */
+      grid-template-rows: repeat(4, 1fr);    /* 4 Reihen, um alles unterzubringen */
+  }
+}
+
+/* Für Bildschirme max 480px */
+@media screen and (max-width: 480px) {
+  .grid-container {
+      grid-template-columns: 1fr; /* 1 Spalte */
+      grid-template-rows: repeat(9, 1fr); /* 9 Reihen */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
 }
